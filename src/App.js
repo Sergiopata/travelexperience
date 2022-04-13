@@ -1,10 +1,18 @@
-import logo from './logo.svg';
+/* import { logDOM } from '@testing-library/react'; */
 import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
+
+
   return (
     <div className="App">
-      <header className="App-header">
+      <NavBar/>
+      <h1 className="text-9xl font-black text-center">TRAVEL EXPERIENCE</h1>
+      <h2 className="text-center text-3xl">Bienvenidos a la Experiencia de Viajar</h2>
+
+      
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +25,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }

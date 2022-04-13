@@ -1,4 +1,30 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body{
+  front-size: 18px;
+  background-color: #f5f6f7;
+  
+
+}
+.menu {
+  display: flex;
+  align-content: stretch;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+}
+.contenedor-navbar {
+  background-color: black;
+  color: white;
+}
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -36,3 +62,4 @@
     transform: rotate(360deg);
   }
 }
+ */
