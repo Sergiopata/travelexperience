@@ -9,9 +9,9 @@ const NavBar = () => {
 
     <ul className="menu menu-horizontal bg-blue">
       <li>Inicio</li>
-      <li tabindex="0">
+      <li>
     <span>Destinos</span>
-    <ul class="bg-black color-white">
+    <ul className="bg-black color-white">
       <li>Litoral</li>
       <li>Cuyo</li>
       <li>Norte</li>

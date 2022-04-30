@@ -23,11 +23,13 @@ const Contador = () => {
   return (
     <>
 
-    <div>Contador</div>
+    <div className="counter">Contador</div>
+    
     <button onClick={subtractHandler}> - </button>
     <strong> { count } </strong>
     <button onClick={addHandler}> + </button>
-
+    <button class="btn">Click Aquí</button>
+    
     </>
   )
 }
