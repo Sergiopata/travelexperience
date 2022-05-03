@@ -6,7 +6,11 @@
 html,
 body{
   front-size: 18px;
-  background-color: #f5f6f7;
+  height: 600px;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center; 
   display: flex;
   justify-content: space-evenly;
   
@@ -30,6 +34,19 @@ body{
   justify-content: space-evenly;
 }
 
+.footer {
+  display: grid;
+  margin-top: 150px;
+  margin-bottom: 0px;
+  text-decoration: underline;
+
+
+}
+.logo {
+  
+  width: 60px;
+  height: 60px
+}
 
 
 

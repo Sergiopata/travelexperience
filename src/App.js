@@ -1,7 +1,7 @@
 import './App.css';
-
-import ProvincesContainer from './travel/ProvincesContainer';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
 
@@ -16,10 +16,14 @@ function App() {
         <h1 className="text-9xl font-black text-center">TRAVEL EXPERIENCE</h1>
         <h2 className= {styles.header}>Bienvenidos a la Experiencia de Viajar</h2>
 
-      <ProvincesContainer />
-   
+      <ItemListContainer />
+      <Footer />
+      
     </div>
+    
   );
+  
 }
+
 
 export default App;

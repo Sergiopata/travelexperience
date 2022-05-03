@@ -1,36 +1,29 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-/* const stock = 10; */
+const Contador = ({stock, initial, onAdd}) => {
 
-const Contador = () => {
-
-  const [count, setCount] = useState(0)
-
-  useEffect ( ()=> {
-    console.log();
-  },[])
-
-  
-
-  const addHandler = () => {
-      setCount(count + 1)
-  }
+  const [count, setCount] = useState(initial)
 
   const subtractHandler = () => {
+    if(count > initial){
       setCount(count - 1)
+    }   
   }
-    
+  const addHandler = () => {
+    if(count < stock){
+      setCount(count + 1)
+    }
+  } 
   return (
-    <>
-
-    <div className="counter">Contador</div>
-    
-    <button onClick={subtractHandler}> - </button>
-    <strong> { count } </strong>
-    <button onClick={addHandler}> + </button>
-    <button class="btn">Click Aquí</button>
-    
-    </>
+    <div>
+      <div className="flex justify-evenly mt-2 bg-gray-200 rounded-xl p-4">
+        <button onClick={subtractHandler}>-</button>
+        <span>{count}</span>
+        <button onClick={addHandler}>+</button>
+        
+      </div>
+      <button onClick = {() => onAdd(count)} className="btn btn-primary"> Agregar al Carrito </button>
+    </div>
   )
 }
 export default Contador

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 import { useEffect, useState } from "react";
 import { provincesData } from "../data/provincesData";
@@ -21,13 +22,13 @@ const ItemList = () => {
       }, 2000);
 
     })
-    getProvincesPromise.then(data => console.log(data))
+    getProvincesPromise.then(data => setProvinces(data))
   }
-  console.log(provincesData, "productos")
-  console.log(provinces)
+  /* console.log(provincesData, "productos")
+  console.log(provinces) */
   return (
-    <div>
-      {provincesData && provincesData.map( p => <Item key={p.id} province={p}/>)}
+    <div className="w-full mx-auto flex flex-wrap justify-center gap-10">
+      {provincesData.map( p => <Item key={p.id} province={p}/>)}
     </div>
   )           
   }

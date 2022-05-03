@@ -1,21 +1,21 @@
 import ItemList from "./ItemList"
 
 
-const ProvincesContainer = () => {
+const ItemListContainer = () => {
   return (
     <div className="text-center">
-      <h1>App TRAVEL</h1>
+     
       <ItemList />
       </div>
     
   )
 }
-export default ProvincesContainer
+export default ItemListContainer 
 
-/* import { useEffect, useState } from "react";
- */
+  /* import { useEffect, useState } from "react"; 
 
-/* const ProvincesContainer = () => {
+
+const ProvincesContainer = () => {
 
 
 const provincesList = ['Buenos Aires', 'Santa Fe', 'Cordoba', 'Misiones', 'Salta', 'Tucuman', 'Entre Rios', 'San Luis']
@@ -48,9 +48,9 @@ const [provinces, setProvinces] = useState([])
     .catch( (err) => {
       console.log('Promesa rechazada', err);
     })
-
+    
     console.log("Fin de ejecucion del useEffect");
-  }, [])
+  }, []) 
   
   
   return (
@@ -60,4 +60,5 @@ const [provinces, setProvinces] = useState([])
     </div>
   )
 }
-export default ProvincesContainer */
+export default ProvincesContainer  
+ */
