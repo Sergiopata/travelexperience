@@ -7,8 +7,9 @@ html,
 body{
   front-size: 18px;
   height: 600px;
-  background-image: url("");
-  background-repeat: no-repeat;
+  background-image: url("./assets/AGENCIAS-DE-TURISMO-696x467.jpg"); 
+  background-size: cover;
+  background-repeat: repeat;
   background-size: 100%;
   background-position: center; 
   display: flex;

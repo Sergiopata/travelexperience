@@ -1,6 +1,9 @@
 import React from 'react'
 import CartWidget from './CartWidget'
 import logo from './../assets/logo.png'
+import { Link } from 'react-router-dom';
+
+
 const NavBar = () => {
 
 
@@ -10,9 +13,9 @@ const NavBar = () => {
     <ul className="menu menu-horizontal bg-blue">
       <div className='logo logo-6px'><img src= {logo} alt='logotipo'/>
       </div>
-      <li>Inicio</li>
+      <li><Link to={'/'}>Inicio</Link></li>
       <li>
-    <span>Destinos</span>
+    <span><Link to={'/'}>Destinos</Link></span>
     <ul className="bg-black color-white">
       <li>Litoral</li>
       <li>Cuyo</li>
@@ -21,7 +24,7 @@ const NavBar = () => {
       <li>Centro</li>
     </ul>
       </li>
-      <li>Contacto</li>
+      <li><Link to={'/'}>Contacto</Link></li>
       <CartWidget />
     </ul>
 

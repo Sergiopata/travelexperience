@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Contador = ({stock, initial, onAdd}) => {
+const ItemCount = ({stock, initial, onAdd}) => {
 
   const [count, setCount] = useState(initial)
 
@@ -26,4 +26,4 @@ const Contador = ({stock, initial, onAdd}) => {
     </div>
   )
 }
-export default Contador
+export default ItemCount

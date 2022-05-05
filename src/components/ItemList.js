@@ -24,8 +24,7 @@ const ItemList = () => {
     })
     getProvincesPromise.then(data => setProvinces(data))
   }
-  /* console.log(provincesData, "productos")
-  console.log(provinces) */
+  
   return (
     <div className="w-full mx-auto flex flex-wrap justify-center gap-10">
       {provincesData.map( p => <Item key={p.id} province={p}/>)}
