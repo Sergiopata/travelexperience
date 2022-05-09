@@ -6,6 +6,7 @@ export const provincesData = [
     price: '1000',
     pictureUrl:'./../imagenes/avion_fly.jpg' ,
     stock: 10 ,
+    category: 'Centro' ,
   },
   {
     id: '2' ,
@@ -14,6 +15,7 @@ export const provincesData = [
     price: '1000',
     pictureUrl:'./../imagenes/avion_fly.jpg'  ,
     stock: 12 ,
+    category: 'Centro' ,
   },
   {
     id: '3',
@@ -22,6 +24,7 @@ export const provincesData = [
     price: '1000',
     pictureUrl: './../imagenes/avion_fly.jpg' ,
     stock: 12 ,
+    category: 'Centro' ,
   },
   {
     id: '4',
@@ -30,6 +33,7 @@ export const provincesData = [
     price: '1000',
     pictureUrl:'./../imagenes/avion_fly.jpg'  ,
     stock: 12 ,
+    category: 'Litoral',
   },
   {
     id: '5',
@@ -38,6 +42,7 @@ export const provincesData = [
     price: '1000',
     pictureUrl: './../imagenes/avion_fly.jpg' ,
     stock: 16 ,
+    category: 'Norte',
   },
   {
     id: '6' ,
@@ -46,6 +51,7 @@ export const provincesData = [
     price: '1000',
     pictureUrl:'./../imagenes/avion_fly.jpg'  ,
     stock: 16 ,
+    category: 'Norte',
   },
   {
     id: '7' ,
@@ -54,6 +60,7 @@ export const provincesData = [
     price: '1000',
     pictureUrl:'./../imagenes/avion_fly.jpg' ,
     stock: 16 ,
+    category: 'Litoral',
   },
   {
     id: '8',
@@ -62,6 +69,7 @@ export const provincesData = [
     price: '1000',
     pictureUrl: './../imagenes/avion_fly.jpg' ,
     stock: 16 ,
+    category: 'Cuyo',
   },
 
 

@@ -1,10 +1,9 @@
-# Getting Started with Create React App
+# TravelExperience - Proyecto de E-Commerce con React Js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+#Este proyecto fue iniciado con [Create React App]. Se llevara a cabo la documentacion y desarrollo del proyecto "TravelExperience", tienda de E-Commerce especializada en venta de pasajes.
 ## Available Scripts
 
-In the project directory, you can run:
+En el directorio del proyecto, puede ejecutar:
 
 ### `npm start`
 
@@ -68,3 +67,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este proyecto se desarrollará con :
+>* React JS
+>* Tailwind CSS

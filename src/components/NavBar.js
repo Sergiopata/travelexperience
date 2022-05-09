@@ -15,16 +15,19 @@ const NavBar = () => {
       </div>
       <li><Link to={'/'}>Inicio</Link></li>
       <li>
-    <span><Link to={'/'}>Destinos</Link></span>
-    <ul className="bg-black color-white">
-      <li>Litoral</li>
-      <li>Cuyo</li>
-      <li>Norte</li>
-      <li>Sur</li>
-      <li>Centro</li>
+    <span><Link to={'/'}>Categoria-Destinos</Link></span>
+
+    <ul className="btn-primary bg-gradient-to-r from-green-400">
+      
+      <li><Link to={'/category/litoral'}>Litoral</Link></li>
+      <li><Link to={'/category/cuyo'}>Cuyo</Link></li>
+      <li><Link to={'/category/norte'}>Norte</Link></li>
+      <li><Link to={'/category/centro'}>Centro</Link></li>
+
     </ul>
       </li>
       <li><Link to={'/'}>Contacto</Link></li>
+      
       <CartWidget />
     </ul>
 

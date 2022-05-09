@@ -28,7 +28,11 @@ const ItemList = () => {
   return (
     <div className="w-full mx-auto flex flex-wrap justify-center gap-10">
       {provincesData.map( p => <Item key={p.id} province={p}/>)}
+
+      
     </div>
+
+
   )           
   }
 export default ItemList
