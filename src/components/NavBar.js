@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from 'react'
 import CartWidget from './CartWidget'
 import logo from './../assets/logo.png'

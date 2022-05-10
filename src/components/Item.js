@@ -12,13 +12,13 @@ const Item = ( props ) => {
   <div className="card w-96 bg-base-100 shadow-xl">
     <figure><img src={pictureUrl} alt="Travel" /></figure>
     <div className="card-body">
-        <h2 className="card-title"><strong> Destino: {title}</strong> </h2>
-        <p><strong> Categoria: {category}</strong></p>
+        <h2 className="card-title"> {title} </h2>
         <p>{description}</p>
         <p><strong> Precio:$ {price}</strong></p> 
+        <p><strong> Categoria: {category}</strong></p>
         <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
       <div className="card-actions justify-end">
-          <Link to={`/Item/${id}`} className="btn btn-primary bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ...">Ver Detalle</Link>
+          <Link to={`/Item/${id}`} className="btn btn-primary bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ...">Ver Mas</Link>
           
       </div> 
     </div>

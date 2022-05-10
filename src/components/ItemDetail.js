@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react"
@@ -13,7 +14,7 @@ const ItemDetail = () => {
 
   useEffect(() => {
     
-  setItem (provincesData.find ( i => i.id === itemId ) )
+  setItem (provincesData.find ( i => i.id == itemId ) )
   
     
   }, [itemId])
