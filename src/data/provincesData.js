@@ -1,6 +1,6 @@
 export const provincesData = [
   {
-    id: 1 ,
+    id: '1' ,
     title: 'Buenos Aires' ,
     description: 'Crea recuerdos inolvidables a través de una explosión de inspiración y propósito.' ,
     price: 1000,
@@ -9,7 +9,7 @@ export const provincesData = [
     category: 'Centro' ,
   },
   {
-    id: 2 ,
+    id: '2' ,
     title: 'Santa Fe' ,
     description: 'Crea recuerdos inolvidables a través de una explosión de inspiración y propósito.' ,
     price: 1000 ,
@@ -18,7 +18,7 @@ export const provincesData = [
     category: 'Centro' ,
   },
   {
-    id: 3,
+    id: '3',
     title: 'Cordoba' ,
     description: 'Crea recuerdos inolvidables a través de una explosión de inspiración y propósito.' ,
     price: 1000 ,
@@ -27,7 +27,7 @@ export const provincesData = [
     category: 'Centro' ,
   },
   {
-    id: 4,
+    id: '4',
     title: 'Misiones'  ,
     description: 'Crea recuerdos inolvidables a través de una explosión de inspiración y propósito.' ,
     price: 1000 ,
@@ -70,7 +70,7 @@ export const provincesData = [
     pictureUrl: './../imagenes/avion_fly.jpg' ,
     stock: 16 ,
     category: 'Cuyo',
-  },
+  }, 
 
 
 ]
