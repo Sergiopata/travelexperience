@@ -4,7 +4,10 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import ItemListContainer from "./components/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ItemDetail from "./components/ItemDetail";
+import ItemDetailContainer from "./components/ItemDetailContainer";
+import AppContextProvider from "./components/context/AppContext";
+import CartContextProvider from "./components/context/CartContext";
+
 
 function App() {
   const styles = {
@@ -12,24 +15,36 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
-      <NavBar />
+      <AppContextProvider>
+          <CartContextProvider>
+              <BrowserRouter>
+                  <NavBar />
 
-      <div className='App'>
-        <h1 className='text-9xl font-black text-center'>TRAVEL EXPERIENCE</h1>
-        <h2 className={styles.header}>
-          Bienvenidos a la Experiencia de Viajar
-        </h2>
-      </div>
+                  <div className="App">
+                      <h1 className="text-9xl font-black text-center">
+                          TRAVEL EXPERIENCE
+                      </h1>
+                      <h2 className={styles.header}>
+                          Bienvenidos a la Experiencia de Viajar
+                      </h2>
+                  </div>
 
-      <Routes>
-        <Route path='/' element={<ItemListContainer />}></Route>
-        <Route path='/Item/:itemId' element={<ItemDetail />}></Route>
-        <Route path='/category/:Id' element={<ItemListContainer />}></Route>
-        <Route path='Item/'></Route>
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+                  <Routes>
+                      <Route path="/" element={<ItemListContainer />}></Route>
+                      <Route
+                          path="/Item/:itemId"
+                          element={<ItemDetailContainer />}
+                      ></Route>
+                      <Route
+                          path="/category/:Id"
+                          element={<ItemListContainer />}
+                      ></Route>
+                      {/* <Route path='Item/'></Route> */}
+                  </Routes>
+                  <Footer />
+              </BrowserRouter>
+          </CartContextProvider>
+      </AppContextProvider>
   );
 }
 
