@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { useAppContext } from "./context/AppContext"
-import { useCartContext } from "./context/CartContext";
+/* import { useAppContext } from "./context/AppContext"
+import { useCartContext } from "./context/CartContext"; */
 
-const ItemCount = ({stock, initial, onAdd, id}) => {
+const ItemCount = ({stock, initial, onAdd }) => {
 
-  const [count, setCount] = useState(initial)
+  const [count, setCount] = useState(initial);
 
-  const { addItem } = useCartContext()
-  const { provinces } = useAppContext()
+  /* const { addItem } = useCartContext()
+  const { provinces } = useAppContext() */
 
   const subtractHandler = () => {
     if(count > initial){
@@ -19,13 +19,14 @@ const ItemCount = ({stock, initial, onAdd, id}) => {
       setCount(count + 1)
     }
   } 
-  const handleClick = (id, cantidad) => {
+  /* const handleClick = (id, cantidad) => {
     const findProvince = provinces.find ((producto) => producto.id === id)
     if (!findProvince) {
       alert ("Error en la base de datos")
       return
     }
-    addItem(findProvince, cantidad)
+    addItem(findProvince, cantidad) */
+    const handleClick = (count) => {
     onAdd(count)
   }
 
@@ -37,7 +38,7 @@ const ItemCount = ({stock, initial, onAdd, id}) => {
         <button onClick={addHandler}>+</button>
         
       </div>
-      <button onClick = {() => handleClick(id,count)
+      <button onClick = {() => handleClick(count)
 } className="btn btn-primary"> Agregar al Carrito </button>
     </div>
   )

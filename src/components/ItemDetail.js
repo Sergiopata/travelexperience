@@ -4,14 +4,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount"
+import { useCartContext } from "./context/CartContext";
 
 
 const ItemDetail = ({ items }) => {
-    const { title, description, price, pictureUrl, stock, category, id } = items;
+    const { title, description, price, pictureUrl, stock, category } = items;
     const [terminar, setTerminar] = useState(false)
+    const {addItem} = useCartContext()
     const onAdd = (count) => {
         setTerminar(true)
-        console.log(count)
+        addItem(items, count)
     };
 
     return (
@@ -33,13 +35,13 @@ const ItemDetail = ({ items }) => {
                         <img src={pictureUrl} alt="Travel" />
                     </figure>
                     {
-                      terminar ? (
+                    terminar ? (
                         <Link to="/cart"  className="btn btn-primary bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ...">
                         Terminar compra
                         </Link>
-                      ):(
-                    <ItemCount stock={stock} initial={1} onAdd={onAdd} id={id}/>
-                      )
+                    ):(
+                    <ItemCount stock={stock} initial={1} onAdd={onAdd} />
+                    )
                     }
 
                     

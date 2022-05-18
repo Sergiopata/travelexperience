@@ -36,7 +36,7 @@ export const provincesData = [
     category: 'Litoral',
   },
   {
-    id: 5,
+    id: '5',
     title: 'Salta' ,
     description: 'Crea recuerdos inolvidables a través de una explosión de inspiración y propósito.' ,
     price:  1000 ,
@@ -45,7 +45,7 @@ export const provincesData = [
     category: 'Norte',
   },
   {
-    id: 6 ,
+    id: '6' ,
     title:  'Tucuman',
     description: 'Crea recuerdos inolvidables a través de una explosión de inspiración y propósito.' ,
     price: 1000 ,
@@ -54,7 +54,7 @@ export const provincesData = [
     category: 'Norte',
   },
   {
-    id: 7 ,
+    id: '7' ,
     title:  'Entre Rios',
     description: 'Crea recuerdos inolvidables a través de una explosión de inspiración y propósito.' ,
     price: 1000 ,
@@ -63,7 +63,7 @@ export const provincesData = [
     category: 'Litoral',
   },
   {
-    id: 8,
+    id: '8',
     title: 'San Luis' ,
     description: 'Crea recuerdos inolvidables a través de una explosión de inspiración y propósito.' ,
     price: 1000 ,
