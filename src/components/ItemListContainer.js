@@ -5,31 +5,30 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-import { provincesData } from "../data/provincesData";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 const ItemListContainer = () => {
-  const { Id } = useParams();
-  const [item, setItem] = useState([]);
+    const { categoryId } = useParams();
+    const [item, setItem] = useState([]);
 
-  useEffect(() => {
-      getItems();
-  }, [Id]);
+    useEffect(() => {
+        const db = getFirestore();
+        const itemsCollection = collection(db, "items");
 
-  const getItems = () => {
-      const getItemsPromise = new Promise((resolve) => {
-          setTimeout(() => {
-              resolve(provincesData);
-          }, 2000);
-      });
+        getDocs(itemsCollection).then((snapshot) => {
+            const provincesList = [];
+            snapshot.docs.forEach((s) => {
+                provincesList.push({ id: s.id, ...s.data() });
+            });
+            if (!categoryId) {
+                setItem(provincesList);
+            } else {
+                setItem(provincesList.filter((i) => i.category === categoryId));
+            }
+        });
+    }, [categoryId]);
 
-      getItemsPromise.then((data) => {
-          if (Id) {
-              setItem(data.filter((e) => e.category.toLowerCase() === Id));
-          } else setItem(data);
-      });
-  };
-
-  return <ItemList items={item} />;
+    return <ItemList items={item} />;
 };
 export default ItemListContainer;
 

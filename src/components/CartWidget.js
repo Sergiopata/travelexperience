@@ -42,8 +42,8 @@ const CartWidget = () => {
                             0
                         )}
                     </span>
-                    <div className="card-actions">
-                        <Link to="/cart" className="btn btn-primary btn-block">
+                    <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
+                        <Link to="/cart" className="btn ml-2 bg-green-500 hover:bg-green-600">
                             Ver carrito
                         </Link>
                     </div>

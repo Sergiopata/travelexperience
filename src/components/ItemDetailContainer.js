@@ -4,31 +4,25 @@
 import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { provincesData }  from "../data/provincesData"
+
+import {doc, getDoc, getFirestore} from "firebase/firestore"
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     const { itemId } = useParams();
 
     useEffect(() => {
-        console.log(itemId);
-        console.log(provincesData.find((i) => i.id == itemId));
-        setItem(provincesData.find((i) => i.id == itemId));
-    }, [itemId]);
     
-    const getItems = () => {
-      const getItemsPromise = new Promise((resolve) => {
-          setTimeout(() => {
-              resolve(provincesData);
-          }, 2000);
-      });
-
-      getItemsPromise.then((data) => {
-        
-              setItem(data);
-          
-      });
-  };
+    const db = getFirestore()
+    
+    const item = doc(db, "items", itemId)
+    getDoc(item).then (snapshot => {
+      if (snapshot.exists()) {
+        setItem ({id:snapshot.id, ...snapshot.data()})
+      }
+    })
+  }, [itemId])
+  
     return (
         <div>
             <ItemDetail items={item} />

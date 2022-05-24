@@ -26,16 +26,16 @@ const NavBar = () => {
 
                     <ul className="btn-primary bg-gradient-to-r from-green-400">
                         <li>
-                            <Link to={"/category/litoral"}>Litoral</Link>
+                            <Link to={"/category/Litoral"}>Litoral</Link>
                         </li>
                         <li>
-                            <Link to={"/category/cuyo"}>Cuyo</Link>
+                            <Link to={"/category/Cuyo"}>Cuyo</Link>
                         </li>
                         <li>
-                            <Link to={"/category/norte"}>Norte</Link>
+                            <Link to={"/category/Norte"}>Norte</Link>
                         </li>
                         <li>
-                            <Link to={"/category/centro"}>Centro</Link>
+                            <Link to={"/category/Centro"}>Centro</Link>
                         </li>
                     </ul>
                 </li>

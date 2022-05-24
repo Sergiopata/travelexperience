@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { provincesData } from "../../data/provincesData";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 const AppContext = createContext()
 
@@ -9,20 +9,14 @@ const AppContextProvider = ({children}) => {
 	const [provinces, setProvinces] = useState([])
 
 	useEffect(() => {
-    getItems()
-	}, [])
+   
+    const db = getFirestore()
+    const itemsCollection = collection(db, "items")
 
-	const getItems = () => {
-    const promesa = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(provincesData);
-      }, 2000);
+        getDocs (itemsCollection).then ((snapshot) => {
+        setProvinces (snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
     });
-
-    promesa.then((data) => {
-      setProvinces(data);
-    });
-  }
+  }, [])
 
   return <AppContext.Provider 
 	value= {{provinces}}>

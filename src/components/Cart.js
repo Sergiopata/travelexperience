@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "./context/CartContext";
+import CartOrder from "./CartOrder";
 
 const Cart = () => {
     const { cart } = useCartContext();
@@ -13,20 +14,20 @@ const Cart = () => {
             </h1>
             {cart.length === 0 ? (
                 <div className="h-[calc(100vh-300px)] grid place-content-center">
-                    <p className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ...">
-                        No has agregado nada al carrito por ahora...
+                    <p className="bg-yellow-500 hover:bg-yellow-600">
+                        Hasta el momento no hay nada agregado al carrito...
                     </p>
                     <Link
                         to="/"
-                        className="btn mt-12 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ..."
+                        className="btn ml-2 bg-green-500 hover:bg-green-600"
                     >
                         Comienza tu compra!
                     </Link>
                 </div>
             ) : (
-                <div className="flex justify-center">
+                <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
                     <button
-                        className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ..."
+                        className="btn ml-2 bg-green-500 hover:bg-green-600"
                         onClick={clearCart}
                     >
                         Vaciar carrito
@@ -50,11 +51,12 @@ const Cart = () => {
                         </p>
                         
                         <button
-                            className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ..."
+                            className="btn ml-2 bg-green-500 hover:bg-green-600"
                             onClick={() => removeItem(item)}
                         >
                             Eliminar
                         </button>
+                        <CartOrder/>
                     </div>
                 </div>
             ))}
