@@ -1,11 +1,17 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-import React from 'react'
+import React, { useState } from 'react'
 import CartWidget from './CartWidget'
 import logo from './../assets/logo.png'
 import { Link } from 'react-router-dom';
+import { useCartContext } from './context/CartContext';
+
+function NavBar() {
+    
+    const { cart } = useCartContext()
 
 
-const NavBar = () => {
+
     return (
         <div className="contenedor-navbar">
             <ul className="menu menu-horizontal bg-blue">
@@ -43,7 +49,9 @@ const NavBar = () => {
                     <Link to={"/"}>Contacto</Link>
                 </li>
 
-                <CartWidget />
+                
+                    <CartWidget /> 
+
             </ul>
         </div>
     );

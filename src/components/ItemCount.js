@@ -32,14 +32,14 @@ const ItemCount = ({stock, initial, onAdd }) => {
 
   return (
     <div>
-      <div className="flex justify-evenly mt-2 bg-gray-200 rounded-xl p-4">
+      <div className="flex justify-evenly mt-1 bg-gray-200 rounded-xl p-0">
         <button onClick={subtractHandler}>-</button>
         <span>{count}</span>
         <button onClick={addHandler}>+</button>
         
       </div>
       <button onClick = {() => handleClick(count)
-} className="btn btn-primary"> Agregar al Carrito </button>
+} className="btn btn-primary mt-2 "> Agregar al Carrito </button>
     </div>
   )
 }

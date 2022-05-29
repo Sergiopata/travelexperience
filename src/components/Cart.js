@@ -43,13 +43,17 @@ const Cart = () => {
                     <div>
                         <h2 className="text-black text-xl"><strong>{item.title}</strong></h2>
                         <p className="text-black text-xl"></p>
-                        <span>Precio: </span>
-                            {item.price}
+                        <span> <strong>Precio Total: $  
+                        {cart.reduce(
+                            (acc, ite) => acc + ite.price * ite.quantity,
+                            0
+                        )} </strong> </span>
+             
                         <p className="text-black text-xl">
-                            <span>Cantidad: </span>
+                            <span> N° Pasajes: </span>
                             {item.quantity}
                         </p>
-                        
+            
                         <button
                             className="btn ml-2 bg-green-500 hover:bg-green-600"
                             onClick={() => removeItem(item)}

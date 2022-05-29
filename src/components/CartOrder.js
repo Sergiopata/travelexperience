@@ -6,9 +6,9 @@ const CartOrder = () => {
 
   const saveOrder = async () => {
     const buyer = {
-      name: "",
-      phone: "",
-      email: "",
+      name: "Ned",
+      phone: "001122334455",
+      email: "perfectirijillo@siempreviva",
     };
     const cartFiltered = cart.map(({ id, title }) => ({ id, title }));
     const orderToSave = {
@@ -46,6 +46,7 @@ const CartOrder = () => {
 	}
 
   return (
+    
     <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
       <button className="btn btn-primary" onClick={saveOrder}>Enviar Datos</button>
       <button className="btn ml-2 bg-green-500 hover:bg-green-600" onClick={updateOrder}>actualizar datos</button>
