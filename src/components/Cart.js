@@ -41,29 +41,40 @@ const Cart = () => {
                 >
                     <img src={item.pictureUrl} alt={item.title} />
                     <div>
-                        <h2 className="text-black text-xl"><strong>{item.title}</strong></h2>
+                        <h2 className="text-black text-xl">
+                            <strong>{item.title}</strong>
+                        </h2>
                         <p className="text-black text-xl"></p>
-                        <span> <strong>Precio Total: $  
-                        {cart.reduce(
-                            (acc, ite) => acc + ite.price * ite.quantity,
-                            0
-                        )} </strong> </span>
-             
+
                         <p className="text-black text-xl">
                             <span> N° Pasajes: </span>
                             {item.quantity}
                         </p>
-            
+                        <p className="text-black text-xl">
+                            <span> SubTotal: </span>
+                            {item.price * item.quantity}
+                        </p>
+
                         <button
                             className="btn ml-2 bg-green-500 hover:bg-green-600"
                             onClick={() => removeItem(item)}
                         >
                             Eliminar
                         </button>
-                        <CartOrder/>
+                        <CartOrder />
                     </div>
                 </div>
             ))}
+            <span className="flex justify-center">
+                {" "}
+                <strong>
+                    Precio Total: $
+                    {cart.reduce(
+                        (acc, ite) => acc + ite.price * ite.quantity,
+                        0
+                    )}{" "}
+                </strong>{" "}
+            </span>
         </div>
     );
 };
