@@ -17,10 +17,10 @@ const ItemDetail = ({ items }) => {
     };
 
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
-            <div className="w-full mx-auto flex flex-wrap justify-center    gap-10">
+        <div className="card card-compact w-96 bg-base-200">
+            <div className="w-full mx-auto justify-center gap-10">
                 <div className="card-body">
-                    <h2 className="card-title">
+                    <h2 className="card-title ">
                         {" "}
                         <strong> Destino: {title} </strong>
                     </h2>
@@ -32,7 +32,7 @@ const ItemDetail = ({ items }) => {
                         <strong> Precio:$ {price}</strong>
                     </p>
                     <figure>
-                        <img src={pictureUrl} alt="Travel" />
+                        <img className="" src={pictureUrl} alt="Travel" />
                     </figure>
                     {
                     terminar ? (
@@ -41,6 +41,7 @@ const ItemDetail = ({ items }) => {
                         </Link>
                     ):(
                     <ItemCount stock={stock} initial={1} onAdd={onAdd} />
+                    
                     )
                     }
 

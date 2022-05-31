@@ -4,23 +4,19 @@ import { Link } from "react-router-dom";
 
 const Item = ({ items }) => {
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-200 shadow-xl">
             <figure>
-                <img src={items.pictureUrl} alt="Travel" />
+                <img src= {items.pictureUrl} alt="Travel" />
             </figure>
             <div className="card-body">
-                <h2 className="card-title"> {items.title} </h2>
-                {/* <p>{items.description}</p> */}
-                <p>
-                    <strong> Precio:$ {items.price}</strong>
+                <h2 className="card-title badge badge-xl text-yellow"> Destino: {items.title} </h2>
+                <p className="">
+                    <strong> Precio: $ {items.price} </strong>
                 </p>
-                {/* <p>
-                  <strong> Categoria: {items.category}</strong>
-              </p> */}
                 <div className="card-actions justify-end">
                     <Link
                         to={`/Item/${items.id}`}
-                        className="btn btn-primary bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ..."
+                        className="btn btn-primary"
                     >
                         {" "}
                         Ver Mas{" "}

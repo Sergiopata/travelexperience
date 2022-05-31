@@ -10,6 +10,7 @@ import CartContextProvider from "./components/context/CartContext";
 import Cart from "./components/Cart";
 
 
+
 function App() {
     const styles = {
         header: "text-center text-3xl m-4",
@@ -26,7 +27,7 @@ function App() {
                             TRAVEL EXPERIENCE
                         </h1>
                         <h2 className={styles.header}>
-                            Bienvenidos a la Experiencia de Viajar
+                        'Crea recuerdos inolvidables a través de una explosión de inspiración y propósito.'
                         </h2>
                     </div>
 

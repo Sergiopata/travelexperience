@@ -6,7 +6,7 @@ const CartWidget = () => {
     const { cart } = useCartContext();
     return (
         <div className="dropdown dropdown-end">
-            <label tabIndex="0" className="btn btn-ghost btn-circle">
+            <label tabIndex="0" className="btn btn-ghost btn-circle bg-black mt-4">
                 <div className="indicator">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@ const CartWidget = () => {
                 className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow"
             >
                 <div className="card-body">
-                    <span className="font-bold text-lg">
+                    <span className="font-bold text-lg text-black">
                         {cart.reduce((acc, ite) => acc + ite.quantity, 0)} Items
                     </span>
                     <span className="text-info">
@@ -45,7 +45,7 @@ const CartWidget = () => {
                         )}
                     </span>
                     <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
-                        <Link to="/cart" className="btn ml-2 bg-green-500 hover:bg-green-600">
+                        <Link to="/cart" className="btn ml-2 bg-green-500 hover:bg-grey-600">
                             Ver carrito
                         </Link>
                     </div>

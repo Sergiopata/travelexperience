@@ -1,13 +1,9 @@
 import { useState } from "react";
-/* import { useAppContext } from "./context/AppContext"
-import { useCartContext } from "./context/CartContext"; */
+
 
 const ItemCount = ({stock, initial, onAdd }) => {
 
   const [count, setCount] = useState(initial);
-
-  /* const { addItem } = useCartContext()
-  const { provinces } = useAppContext() */
 
   const subtractHandler = () => {
     if(count > initial){
@@ -19,14 +15,7 @@ const ItemCount = ({stock, initial, onAdd }) => {
       setCount(count + 1)
     }
   } 
-  /* const handleClick = (id, cantidad) => {
-    const findProvince = provinces.find ((producto) => producto.id === id)
-    if (!findProvince) {
-      alert ("Error en la base de datos")
-      return
-    }
-    addItem(findProvince, cantidad) */
-    const handleClick = (count) => {
+  const handleClick = (count) => {
     onAdd(count)
   }
 

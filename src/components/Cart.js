@@ -8,18 +8,18 @@ const Cart = () => {
     const { clearCart } = useCartContext();
 
     return (
-        <div className="container mx-auto black">
+        <div className="container mx-auto bg-white">
             <h1 className="text-black text-center text-5xl p-4 mb-6">
                 Carrito
             </h1>
             {cart.length === 0 ? (
                 <div className="h-[calc(100vh-300px)] grid place-content-center">
-                    <p className="bg-yellow-500 hover:bg-yellow-600">
-                        Hasta el momento no hay nada agregado al carrito...
+                    <p className="badge font-extrabold">
+                        Por el momento no hay nada agregado al carrito...
                     </p>
                     <Link
                         to="/"
-                        className="btn ml-2 bg-green-500 hover:bg-green-600"
+                        className="btn ml-2 mt-2 bg-green-500 hover:bg-green-600"
                     >
                         Comienza tu compra!
                     </Link>
@@ -51,7 +51,7 @@ const Cart = () => {
                             {item.quantity}
                         </p>
                         <p className="text-black text-xl">
-                            <span> SubTotal: </span>
+                            <span> SubTotal:$ </span>
                             {item.price * item.quantity}
                         </p>
 
@@ -65,7 +65,7 @@ const Cart = () => {
                     </div>
                 </div>
             ))}
-            <span className="flex justify-center">
+            <span className="flex justify-center text-xl badge-primary ">
                 {" "}
                 <strong>
                     Precio Total: $
