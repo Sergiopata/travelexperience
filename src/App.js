@@ -32,17 +32,17 @@ function App() {
                     </div>
 
                     <Routes>
-                        <Route path="/" element={<ItemListContainer />}></Route>
+                        <Route path="/" element={<ItemListContainer/>}></Route>
                         <Route
                             path="/Item/:itemId"
-                            element={<ItemDetailContainer />}
+                            element={<ItemDetailContainer/>}
                         ></Route>
                         <Route
                             path="/category/:categoryId"
-                            element={<ItemListContainer />}
+                            element={<ItemListContainer/>}
                         ></Route>
-                        <Route path="/cart" element={<Cart />}></Route>
-                        <Route path="/checkout" element={<Checkout />}></Route>
+                        <Route path="/cart" element={<Cart/>}></Route>
+                        <Route path="/checkout" element={<Checkout/>}></Route>
                     </Routes>
                     <Footer />
                 </BrowserRouter>
