@@ -8,8 +8,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import AppContextProvider from "./components/context/AppContext";
 import CartContextProvider from "./components/context/CartContext";
 import Cart from "./components/Cart";
-
-
+import Checkout from "./components/Checkout";
 
 function App() {
     const styles = {
@@ -27,7 +26,8 @@ function App() {
                             TRAVEL EXPERIENCE
                         </h1>
                         <h2 className={styles.header}>
-                        'Crea recuerdos inolvidables a través de una explosión de inspiración y propósito.'
+                            'Crea recuerdos inolvidables a través de una
+                            explosión de inspiración y propósito.'
                         </h2>
                     </div>
 
@@ -42,6 +42,7 @@ function App() {
                             element={<ItemListContainer />}
                         ></Route>
                         <Route path="/cart" element={<Cart />}></Route>
+                        <Route path="/checkout" element={<Checkout />}></Route>
                     </Routes>
                     <Footer />
                 </BrowserRouter>

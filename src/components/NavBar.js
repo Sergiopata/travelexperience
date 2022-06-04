@@ -9,6 +9,8 @@ import { useCartContext } from './context/CartContext';
 function NavBar() {
     
     const { cart } = useCartContext()
+    let [open, setOpen] = useState(false)
+
 
 
 

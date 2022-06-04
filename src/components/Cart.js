@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "./context/CartContext";
-import CartOrder from "./CartOrder";
+
 
 const Cart = () => {
     const { cart } = useCartContext();
@@ -21,7 +21,7 @@ const Cart = () => {
                         to="/"
                         className="btn ml-2 mt-2 bg-green-500 hover:bg-green-600"
                     >
-                        Comienza tu compra!
+                        Volver al inicio para realizar tu compra!
                     </Link>
                 </div>
             ) : (
@@ -61,7 +61,7 @@ const Cart = () => {
                         >
                             Eliminar
                         </button>
-                        <CartOrder />
+                        <Link to="/checkout"className="btn ml-2 bg-green-500 hover:bg-green-600">CHECKOUT</Link>
                     </div>
                 </div>
             ))}
