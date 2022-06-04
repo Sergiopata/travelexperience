@@ -8,7 +8,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import AppContextProvider from "./components/context/AppContext";
 import CartContextProvider from "./components/context/CartContext";
 import Cart from "./components/Cart";
-import Checkout from "./components/Checkout";
+import Checkout from "./components/CheckOut";
 
 function App() {
     const styles = {
