@@ -3,7 +3,7 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Checkout = () => {
+const CheckOut = () => {
   const { cart, cartTotal, clearCart } = useCartContext();
   const [showModal, setShowModal] = useState(false);
   const [orderId, setOrderId] = useState({ id: "" });
@@ -48,7 +48,7 @@ const Checkout = () => {
   const telephone =
     /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{1,6}$/im;
 
-  return (
+    return (
     <>
       <div className="flex flex-col justify-start items-start w-full mt-6 lg:mt-0 mb-3">
         <form className="space-y-6">
@@ -140,7 +140,7 @@ const Checkout = () => {
             </h2>
             <p className={"mt-6 text-center md:w-9/12 lg:w-7/12 "}>
               Enviaremos un mail a {buyer.email.toLowerCase()} con tu orden de
-              compra ID: {orderId.id}. ¡Gracias por confiar en nosotros, esperamos tengas una excelente experiencia!
+              compra ID: {orderId.id}. ¡Gracias por confiar en nosotros, que tengas una excelente experiencia!
             </p>
             <Link to="/" className="mt-6 flex justify-center">
               <button
@@ -159,4 +159,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default CheckOut;
