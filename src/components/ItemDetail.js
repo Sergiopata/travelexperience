@@ -17,12 +17,13 @@ const ItemDetail = ({ items }) => {
     };
 
     return (
+        <section className="detail rounded-md">
         <div className="card card-compact w-96 bg-base-200">
             <div className="w-full mx-auto justify-center gap-10">
-                <div className="card-body">
+                <div className="card-body grid justify-items-center">
                     <h2 className="card-title ">
                         {" "}
-                        <strong> Destino: {title} </strong>
+                        <strong > Destino: {title} </strong>
                     </h2>
                     <p>
                         <strong> Categoria: {category} </strong>
@@ -50,6 +51,7 @@ const ItemDetail = ({ items }) => {
                 </div>
             </div>
         </div>
+        </section>
     );
 };
 export default ItemDetail

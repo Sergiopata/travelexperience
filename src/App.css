@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+
 html,
 body{
   front-size: 18px;
@@ -28,6 +29,7 @@ body{
 .contenedor-navbar {
   background-color: #024A86;
   color: white;
+  
 }
 
 .counter {
@@ -48,3 +50,26 @@ body{
   width: 100px;
   height: 100px
 }
+
+.card:hover {
+  box-shadow: 0 5px 15px #303030;
+  transform: translateY(-15px);
+  display-grid: center;
+}
+.card-body{
+    margin: 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+
+.detail {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  margin-bottom: 1.75rem;
+}
+

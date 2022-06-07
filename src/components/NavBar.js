@@ -7,12 +7,8 @@ import { Link } from 'react-router-dom';
 import { useCartContext } from './context/CartContext';
 
 function NavBar() {
-    
-    const { cart } = useCartContext()
-    let [open, setOpen] = useState(false)
-
-
-
+    const { cart } = useCartContext();
+    let [open, setOpen] = useState(false);
 
     return (
         <div className="contenedor-navbar">
@@ -51,12 +47,10 @@ function NavBar() {
                     <Link to={"/"}>Contacto</Link>
                 </li>
 
-                
-                    <CartWidget /> 
-
+                <CartWidget />
             </ul>
         </div>
     );
-};
+}
 
 export default NavBar;
