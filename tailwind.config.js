@@ -3,7 +3,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    variantes:{
+      display: ["group-hover"]
+    },
+    extend: {
+      colors:{
+        'sergio-blue': '#024A86'
+      }
+    },
   },
   plugins: [
     require("daisyui")

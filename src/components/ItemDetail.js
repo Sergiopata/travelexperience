@@ -17,8 +17,8 @@ const ItemDetail = ({ items }) => {
     };
 
     return (
-        <section className="detail rounded-md">
-        <div className="card card-compact w-96 bg-base-200">
+        <section className="mt-20">
+        <div className="card card-compact w-96 bg-base-200 mx-auto">
             <div className="w-full mx-auto justify-center gap-10">
                 <div className="card-body grid justify-items-center">
                     <h2 className="card-title ">
@@ -33,7 +33,7 @@ const ItemDetail = ({ items }) => {
                         <strong> Precio:$ {price}</strong>
                     </p>
                     <figure>
-                        <img className="" src={pictureUrl} alt="Travel" />
+                        <img  src={pictureUrl} alt="Travel" />
                     </figure>
                     {
                     terminar ? (

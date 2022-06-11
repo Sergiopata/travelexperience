@@ -6,19 +6,18 @@
 
 html,
 body{
-  front-size: 18px;
-  height: 600px;
-  background-color: #00FFFF; 
-  background-size: cover;
-  background-repeat: repeat;
+  font-size: 18px;
+  height: 800px;
+  background-image: url("../public/imagenes/fondito.png"); 
   background-size: 100%;
+  background-repeat: repeat;
   background-position: center; 
   display: flex;
   justify-content: space-evenly;
   
-  
-
 }
+
+
 .menu {
   display: flex;
   align-content: stretch;
@@ -26,11 +25,11 @@ body{
   justify-content: space-evenly;
   
 }
-.contenedor-navbar {
+.contenedor-navbar{
   background-color: #024A86;
   color: white;
-  
 }
+  
 
 .counter {
   display: flex;
@@ -45,31 +44,23 @@ body{
 
 
 }
+
 .logo {
   
   width: 100px;
-  height: 100px
+  height: 100px;
+
 }
+
 
 .card:hover {
   box-shadow: 0 5px 15px #303030;
   transform: translateY(-15px);
-  display-grid: center;
-}
-.card-body{
-    margin: 20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
+  
 }
 
+.image-detail {
+  width: 150px;
+  height: 150px;
 
-.detail {
-  width: 50%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: auto;
-  margin-bottom: 1.75rem;
 }
-

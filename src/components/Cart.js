@@ -14,7 +14,7 @@ const Cart = () => {
             </h1>
             {cart.length === 0 ? (
                 <div className="h-[calc(100vh-300px)] grid place-content-center">
-                    <p className="badge font-extrabold">
+                    <p className="font-extrabold text-center">
                         Por el momento no hay nada agregado al carrito...
                     </p>
                     <Link
@@ -39,7 +39,7 @@ const Cart = () => {
                     key={item.id}
                     className="flex flex-row p-4 items-center justify-center gap-4"
                 >
-                    <img src={item.pictureUrl} alt={item.title} />
+                    <img className="image-detail" src={item.pictureUrl} alt={item.title} />
                     <div>
                         <h2 className="text-black text-xl">
                             <strong>{item.title}</strong>

@@ -12,7 +12,7 @@ import CheckOut from "./components/CheckOut";
 
 function App() {
     const styles = {
-        header: "text-center text-3xl m-4",
+        header: "text-center text-2xl md:text-3xl my-4",
     };
 
     return (
@@ -20,9 +20,9 @@ function App() {
             <CartContextProvider>
                 <BrowserRouter>
                     <NavBar />
-
+                   
                     <div className="App">
-                        <h1 className="text-9xl font-black text-center">
+                        <h1 className="text-3xl md:text-9xl font-black text-center text-">
                             TRAVEL EXPERIENCE
                         </h1>
                         <h2 className={styles.header}>
